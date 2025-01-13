@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Privacy Policy - EnviroClub</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../EnviroClubStyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="fixed-header">
+        <h1>The EnviroClub Website</h1>
+        <nav>
+        <a href="../EnviroClubWebpage.html">Home</a>
+        <a href="../SubWebpages/AboutEnviroClub.html">About Us</a>
+        <div class="dropdown">
+        <span class="dropbtn" onclick="toggleDropdown()">Dates</span>
+        <div class="dropdown-content">
+        <a href="../DateWebpages/WorldWetlandDay.html">World Wetland Day</a>
+        <a href="../DateWebpages/WorldWildlifeDay.html">World Wildlife Day</a>
+        <a href="../DateWebpages/WorldWaterDay.html">World Water Day</a>
+        <a href="../DateWebpages/EarthDay.html">Earth Day</a>
+        <a href="../DateWebpages/WorldMigratoryBridDay.html">World Migratory Bird Day</a>
+        <a href="../DateWebpages/WorldEnvironmentDay.html">World Environment Day</a>
+        <a href="../DateWebpages/WorldOceansDay.html">World Oceans Day</a>
+        <a href="../DateWebpages/WorldCleanupDay.html">World Cleanup Day</a>
+        <a href="../DateWebpages/InternationalDayOfClimateAction.html">International Day of Climate Action</a>
+        <a href="../DateWebpages/WorldSoilDay.html">World Soil Day</a>
+        </div>
+        </div>
+        <a href="../index.html">Analyse Photo</a>
+        <a href="../SubWebpages/Contact.html">Contact</a>
+        </nav>
+        </div>
+
+        <br>
+        <br>
+        <br>
+        <br>
+
+    <header>
+        <h1>Privacy Policy</h1>
+    </header>
+
+    <main>
+        <p><strong>Last updated:</strong> January 05, 2025 <br><br>
+
+            We are committed to protecting your privacy. This Privacy Policy outlines the types of information we collect when you visit our website, and how we use and protect that information.
+            <br><br>
+        <strong>1. Information We Collect</strong>
+            <br>
+            We collect two types of information when you interact with our website:
+            <br>
+            Personal Information: We do not collect personal information unless you voluntarily provide it. If you choose to contact us, you may be asked for your name and email address.
+            <br>
+            Non-personal Information: This includes information automatically collected when you visit our website, such as your IP address, browser type, and operating system. We may also collect data on how you interact with our website (e.g., pages visited, time spent on the site).
+            <br><br>
+        <strong>2. Use of Information</strong>
+            <br>
+            Personal Information: Any personal information you provide will only be used to respond to inquiries or provide you with requested information (e.g., newsletters or updates about the Environment Club).
+            <br>
+            Non-personal Information: We use non-personal information to improve the functionality and user experience of our website. This may include analyzing website traffic and making adjustments to better serve our visitors.
+            <br><br>
+           <strong>3. Uploaded Photos and Image Analysis</strong> 
+           <br>
+           When you upload a photo to the website, the image is temporarily processed by the MobileNet AI for analysis. We do not store the uploaded images on our servers, and the photo is discarded after the analysis is completed. 
+           We do not share your image with any third parties. The data collected from the image analysis, such as the objects detected, material composition, or biodegradation time, is used solely to provide feedback and is not linked to your identity.
+           <br><br>
+        <strong>4. Data Retention</strong>
+        <br>
+        Uploaded photos are processed and temporarily stored for a brief period to allow for analysis. Once the analysis is complete, the image is immediately discarded. We do not retain your uploaded image for any longer than necessary for the analysis process.
+        <br><br>
+        <strong>5. Automated Decision-Making</strong>
+        <br>
+        The feedback you receive regarding the objects in your image, including material analysis and biodegradation time, is based on an automated process performed by our AI algorithm (MobileNet). No human intervention is involved in this process.
+        <br><br>
+        <strong>6. Cookies</strong>
+            <br>
+            We may use cookies to enhance your experience on our website, including managing your session during image analysis. Cookies are small files stored on your device that allow us to remember your preferences. You can choose to disable cookies through your browser settings, but this may affect some features of the website.
+            <br><br>
+        <strong>7. Data Security</strong>
+            <br>
+            We take appropriate measures to protect any personal information you provide from unauthorized access, alteration, or disclosure. However, please be aware that no method of transmission over the internet is 100% secure, and we cannot guarantee the absolute security of your information.
+            <br><br>
+        <strong>8. Third-Party Links</strong>
+            <br>
+            Our website may contain links to external websites. These third-party sites have their own privacy policies, and we are not responsible for their content or practices. We encourage you to review the privacy policies of any third-party websites you visit.
+            <br><br>
+        <strong>9. Your Rights</strong>
+            <br>
+            You have the right to access, update, or delete any personal information you have provided to us. If you would like to make any changes to the information we have on file, or if you wish to opt out of communications from us, please contact us at EnviroClub21@gmail.com.
+            <br><br>
+        <strong>10. Changes To This Privacy Policy</strong>
+            <br>
+            We may update this Privacy Policy from time to time. Any changes will be posted on this page, and the "Last updated" date will be revised accordingly.
+            <br><br>
+        <strong>Contact Us</strong>
+            <br>
+            If you have any questions or concerns about this Privacy Policy, please feel free to contact us at EnviroClub21@gmail.com.</p>
+    </main>
+    <script>
+        function toggleDropdown() {
+            const dropdown = document.getElementById("dropdownContent");
+            dropdown.classList.toggle("show");
+        }
+    
+        // Close the dropdown if clicking outside of it
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+                const dropdowns = document.getElementsByClassName("dropdown-content");
+                for (let i = 0; i < dropdowns.length; i++) {
+                    const openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+<footer class="Footer">
+    <p>© Danielle Newmarch. </p><p>All rights reserved.</p>
+    <nav>
+    <a href="../SubWebpages/AboutEnviroClub.html">About EnviroClub </a> | 
+    <a href="../SubWebpages/Contact.html">Contact</a> | 
+    <a href="./PrivacyPolicy.html">Privacy Policy</a>
+    </nav>
+    </footer>
+</html>

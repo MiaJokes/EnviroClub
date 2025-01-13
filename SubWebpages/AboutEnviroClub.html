@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About EnviroClub - EnviroClub</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../EnviroClubStyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="fixed-header">
+        <h1>The EnviroClub Website</h1>
+        <nav>
+        <a href="../EnviroClubWebpage.html">Home</a>
+        <a href="../SubWebpages/AboutEnviroClub.html">About Us</a>
+        <div class="dropdown">
+        <span class="dropbtn" onclick="toggleDropdown()">Dates</span>
+        <div class="dropdown-content">
+        <a href="../DateWebpages/WorldWetlandDay.html">World Wetland Day</a>
+        <a href="../DateWebpages/WorldWildlifeDay.html">World Wildlife Day</a>
+        <a href="../DateWebpages/WorldWaterDay.html">World Water Day</a>
+        <a href="../DateWebpages/EarthDay.html">Earth Day</a>
+        <a href="../DateWebpages/WorldMigratoryBridDay.html">World Migratory Bird Day</a>
+        <a href="../DateWebpages/WorldEnvironmentDay.html">World Environment Day</a>
+        <a href="../DateWebpages/WorldOceansDay.html">World Oceans Day</a>
+        <a href="../DateWebpages/WorldCleanupDay.html">World Cleanup Day</a>
+        <a href="../DateWebpages/InternationalDayOfClimateAction.html">International Day of Climate Action</a>
+        <a href="../DateWebpages/WorldSoilDay.html">World Soil Day</a>
+        </div>
+        </div>
+        <a href="../index.html">Analyse Photo</a>
+        <a href="../SubWebpages/Contact.html">Contact</a>
+        </nav>
+        </div>
+
+        <br>
+        <br>
+        <br>
+        <br>
+
+    <header>
+        <h1>About the EnviroClub: Together for the Planet</h1>
+    </header>
+
+    <main>
+        <p>Welcome to the EnviroClub, where we believe that small actions can lead to big changes in protecting and preserving our planet. Our club is a vibrant
+             community of passionate individuals dedicated to raising awareness, promoting sustainability, and taking tangible steps to create a greener, more eco-conscious world.
+            <br><br>
+            <strong>Our Mission</strong>
+            <br>
+            The EnviroClub was founded with the simple but powerful goal of making a positive impact on our environment. Our 2025 Captain, Thandolwethu Myeza, 
+            wishes for the club to be a safe space where people can foster a deeper connection with nature and promote sustainable living through engaging 
+            activities such as thrift events, beach cleanups, and educational experiences like birdwatching. Together, we aim to empower students and inspire 
+            positive environmental change to protect our planet for future generations.
+            <br><br>
+        <strong>Goals:</strong>
+        <br>
+            Educate our community about the pressing environmental challenges we face.<br>
+            Inspire action through hands-on projects and initiatives.<br>
+            Promote sustainability in all aspects of life, from reducing waste to conserving resources.<br>
+            Collaborate with local organizations and other groups to amplify our impact.
+            <br><br>
+        <strong>What We Do</strong>
+        <br>
+            At the EnviroClub, we are committed to taking action on a variety of environmental issues, including climate change, waste reduction, 
+            biodiversity conservation, and sustainable living. Our members engage in activities such as:
+            <br>
+            Organizing recycling and waste reduction campaigns/events.<br>
+            Planting trees and creating green spaces.<br>
+            Running fundraising efforts for environmental causes (last year we adopted penguins!).<br>
+            Participating in local clean-up projects.<br>
+            We also use our platform to raise awareness about global and local environmental issues, encouraging individuals to make informed decisions and adopt sustainable practices.
+            <br><br>
+            <strong>Why It Matters</strong>
+            <br>
+            Our planet is facing unprecedented challenges, from climate change and deforestation to pollution and loss of biodiversity. The time to act is now, and we believe that together,
+             we can make a difference. By joining the EnviroClub, you become part of a collective effort to protect the Earth for future generations. Whether through small daily actions or 
+             larger initiatives, every step counts in the fight for a healthier planet. <br>
+             Our 2025 Vice-Captain, Saskia Pillay, still vividly remembers her first birdwatching walk and "the unforgettable 
+             feeling of being surrounded by a diverse and life-filled ecosystem, while breathing in its fresh air."
+             She also loves sharing stories about beach clean-ups and how it was "an eye-opening experience to see just how much plastic and litter there was." <br> Our planet is in desperate need of help and there can "never be too many helping hands". We assure you, everything you do matters.
+             <br><br>
+            <strong>Join Us</strong>
+            <br>
+            The EnviroClub is open to everyone who is passionate about making a difference. Whether you're a seasoned environmental advocate or someone just starting to learn about 
+            sustainability, we welcome you to join our community. <br> And as we always say, while the environment is at the heart of the EnviroClub, 
+            it's the people and the hilarious and heartfelt moments that truly make the club come alive. <br> Join us and together we can create a brighter, greener future for our planet.
+            <br><br><br>
+            <strong><em>Together for the Planet. Together for a better tomorrow.</em></strong></p>
+    </main>
+    <script>
+        function toggleDropdown() {
+            const dropdown = document.getElementById("dropdownContent");
+            dropdown.classList.toggle("show");
+        }
+    
+        // Close the dropdown if clicking outside of it
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+                const dropdowns = document.getElementsByClassName("dropdown-content");
+                for (let i = 0; i < dropdowns.length; i++) {
+                    const openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+<footer class="Footer">
+    <p>© Danielle Newmarch. </p><p>All rights reserved.</p>
+    <nav>
+    <a href="../SubWebpages/AboutEnviroClub.html">About EnviroClub </a> | 
+    <a href="../SubWebpages/Contact.html">Contact</a> | 
+    <a href="../SubWebpages/PrivacyPolicy.html">Privacy Policy</a>
+    </nav>
+    </footer>
+</html>
