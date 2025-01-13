@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analyse - EnviroClub</title>
+    <link rel="stylesheet" href="./EnviroClubStyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-vis"></script>
+</head>
+<body>
+  <!--Fixed Header-->
+<div class="fixed-header">
+    <h1>The EnviroClub Website</h1>
+    <nav>
+    <a href="./EnviroClubWebpage.html">Home</a>
+    <a href="./SubWebpages/AboutEnviroClub.html">About Us</a>
+    <!--Dropdown list of dates in Header-->
+    <div class="dropdown">
+    <span class="dropbtn" onclick="toggleDropdown()">Dates</span>
+    <div class="dropdown-content">
+    <a href="./DateWebpages/WorldWetlandDay.html">World Wetland Day</a>
+    <a href="./DateWebpages/WorldWildlifeDay.html">World Wildlife Day</a>
+    <a href="./DateWebpages/WorldWaterDay.html">World Water Day</a>
+    <a href="./DateWebpages/EarthDay.html">Earth Day</a>
+    <a href="./DateWebpages/WorldMigratoryBridDay.html">World Migratory Bird Day</a>
+    <a href="./DateWebpages/WorldEnvironmentDay.html">World Environment Day</a>
+    <a href="./DateWebpages/WorldOceansDay.html">World Oceans Day</a>
+    <a href="./DateWebpages/WorldCleanupDay.html">World Cleanup Day</a>
+    <a href="./DateWebpages/InternationalDayOfClimateAction.html">International Day of Climate Action</a>
+    <a href="./DateWebpages/WorldSoilDay.html">World Soil Day</a>
+    </div>
+    </div>
+    <a href="./index.html">Analyse Photo</a>
+    <a href="./SubWebpages/Contact.html">Contact</a>
+    </nav>
+</div>
+
+    <main class="upload-container">
+        <h1>Analyse A Photo!</h1>
+        <p>Upload a clear photo of an object, preferably with no background, to find out what material it's made of and how long it takes to biodegrade.</p>
+        
+        <label for="imageInput">Upload your chosen photo below:</label>
+        <input type="file" id="imageInput" accept="image/*" class="file-input">
+        
+        <div id="loadingMessage" class="loading-message">Analysing...</div>
+        <img id="uploadedImage" src="" alt="Uploaded Image Preview" class="preview-image">
+        <div id="result" class="result"></div>
+    </main>
+
+    <br>
+
+    <script src="app.js"></script>
+
+    <script>
+        function toggleDropdown() {
+            const dropdown = document.getElementById("dropdownContent");
+            dropdown.classList.toggle("show");
+        }
+    
+        // Close the dropdown if clicking outside of it
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+                const dropdowns = document.getElementsByClassName("dropdown-content");
+                for (let i = 0; i < dropdowns.length; i++) {
+                    const openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+
+</body>
+
+    <footer class="Footer">
+        <p>© Danielle Newmarch.</p><p>All rights reserved.</p>
+        <nav>
+            <a href="./SubWebpages/AboutEnviroClub.html">About EnviroClub</a> | 
+            <a href="./SubWebpages/Contact.html">Contact</a> | 
+            <a href="./SubWebpages/PrivacyPolicy.html">Privacy Policy</a>
+        </nav>
+    </footer>
+</html>
