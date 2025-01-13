@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Oceans Day - EnviroClub</title>
+    <link rel="stylesheet" href="../EnviroClubStyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!--Fixed Header-->
+<div class="fixed-header">
+    <h1>The EnviroClub Website</h1>
+    <nav>
+    <a href="../EnviroClubWebpage.html">Home</a>
+    <a href="../SubWebpages/AboutEnviroClub.html">About Us</a>
+    <!--Dropdown list of dates in Header-->
+    <div class="dropdown">
+    <span class="dropbtn" onclick="toggleDropdown()">Dates</span>
+    <div class="dropdown-content">
+        <a href="./WorldWetlandDay.html">World Wetland Day</a>
+        <a href="./WorldWildlifeDay.html">World Wildlife Day</a>
+        <a href="./WorldWaterDay.html">World Water Day</a>
+        <a href="./EarthDay.html">Earth Day</a>
+        <a href="./WorldMigratoryBridDay.html">World Migratory Bird Day</a>
+        <a href="./WorldEnvironmentDay.html">World Environment Day</a>
+        <a href="./WorldOceansDay.html">World Oceans Day</a>
+        <a href="./WorldCleanupDay.html">World Cleanup Day</a>
+        <a href="./InternationalDayOfClimateAction.html">International Day of Climate Action</a>
+        <a href="./WorldSoilDay.html">World Soil Day</a>
+    </div>
+    </div>
+    <a href="../index.html">Analyse Photo</a>
+    <a href="../SubWebpages/Contact.html">Contact</a>
+    </nav>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <header>
+        <h1>Welcome To World Oceans Day!</h1>
+    </header>
+
+    <main>
+        <p><strong>Celebrate the wonders of our oceans and dive into the importance of protecting them on on June 8th.</strong></p>
+        <h2>What Makes Our Oceans Breath?</h2>
+        <p>The ocean, often dubbed the <strong>"lungs of the planet"</strong>, is a <strong>vital oxygen producer.</strong> Tiny marine plants, primarily <strong>phytoplankton</strong>, harness sunlight through photosynthesis,
+            converting carbon dioxide into oxygen. These <strong> microscopic organisms generate over half of the Earth's oxygen,</strong> making them indispensable to life as we know it. Their
+            role in <strong>regulating our climate, absorbing carbon dioxide, and supporting marine biodiversity</strong> is irreplaceable.
+            <br><br>However, <strong>human activities</strong> such as pollution, overfishing, and climate change pose significant threats to the health of our oceans. To safeguard this 
+            precious resource, we must adopt <strong>sustainable practices, reduce our carbon footprint, and minimize plastic pollution.</strong> By protecting our oceans, we ensure a
+            <strong>healthy planet for future generations.</strong></p>
+        <div class="video-container">
+            <iframe
+            src="https://www.youtube.com/embed/ycRNlV5ylCc?si=O5_JaWDDLq9iJW6J" 
+            title="YouTube Oceans Video" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" 
+            allowfullscreen></iframe>
+        </div>
+    </main>
+    <script>
+        function toggleDropdown() {
+            const dropdown = document.getElementById("dropdownContent");
+            dropdown.classList.toggle("show");
+        }
+    
+        // Close the dropdown if clicking outside of it
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+                const dropdowns = document.getElementsByClassName("dropdown-content");
+                for (let i = 0; i < dropdowns.length; i++) {
+                    const openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+<footer class="Footer">
+    <p>© Danielle Newmarch. </p><p>All rights reserved.</p>
+    <nav>
+    <a href="../SubWebpages/AboutEnviroClub.html">About EnviroClub </a> | 
+    <a href="../SubWebpages/Contact.html">Contact</a> | 
+    <a href="../SubWebpages/PrivacyPolicy.html">Privacy Policy</a>
+    </nav>
+    </footer>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Wetland Day - EnviroClub</title>
+    <link rel="stylesheet" href="../EnviroClubStyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+     <!--Fixed Header-->
+<div class="fixed-header">
+    <h1>The EnviroClub Website</h1>
+    <nav>
+    <a href="../EnviroClubWebpage.html">Home</a>
+    <a href="../SubWebpages/AboutEnviroClub.html">About Us</a>
+    <!--Dropdown list of dates in Header-->
+    <div class="dropdown">
+    <span class="dropbtn" onclick="toggleDropdown()">Dates</span>
+    <div class="dropdown-content">
+        <a href="./WorldWetlandDay.html">World Wetland Day</a>
+        <a href="./WorldWildlifeDay.html">World Wildlife Day</a>
+        <a href="./WorldWaterDay.html">World Water Day</a>
+        <a href="./EarthDay.html">Earth Day</a>
+        <a href="./WorldMigratoryBridDay.html">World Migratory Bird Day</a>
+        <a href="./WorldEnvironmentDay.html">World Environment Day</a>
+        <a href="./WorldOceansDay.html">World Oceans Day</a>
+        <a href="./WorldCleanupDay.html">World Cleanup Day</a>
+        <a href="./InternationalDayOfClimateAction.html">International Day of Climate Action</a>
+        <a href="./WorldSoilDay.html">World Soil Day</a>
+    </div>
+    </div>
+    <a href="../index.html">Analyse Photo</a>
+    <a href="../SubWebpages/Contact.html">Contact</a>
+    </nav>
+    </div>
+
+        <br>
+        <br>
+        <br>
+        <br>
+
+    <header>
+        <h1>Welcome To World Wetland Day!</h1>
+    </header>
+
+    <main>
+        <p><strong>Celebrate the importance of wetlands for both the environment and human wellbeing on February 2nd!</strong></p>
+        <h2>What Are Wetlands?</h2>
+        <p>Wetlands are <strong>unique semi-aquatic ecosystems</strong>, meaning they are areas where water covers the soil for most of the year. 
+        These incredible landscapes act as <strong> "Nature's Kidneys" </strong>, filtering and purifying water. They also provide a <strong>safe habitat for wildlife </strong>-  
+        offering <strong>food, shelter, and breeding grounds </strong>for countless species. 
+        <br><br>Wetlands are also <strong> essential for humans </strong>too! They help <strong> prevent floods </strong> by absorbing excess water, store carbon to <strong> combat Climate Change</strong>,
+        and <strong> support livelihoods </strong> around the world. From the vast <strong> mangroves </strong> lining tropical coasts to tranquil inland <strong> marshes,
+        wetlands are vital for the health of our planet.</strong></p>
+    
+        <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/jpyvMNFglNE" 
+        title="YouTube video player" 
+        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" 
+        allowfullscreen>
+        </iframe>
+        </div>
+
+    </main>
+    <script>
+        function toggleDropdown() {
+            const dropdown = document.getElementById("dropdownContent");
+            dropdown.classList.toggle("show");
+        }
+    
+        // Close the dropdown if clicking outside of it
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+                const dropdowns = document.getElementsByClassName("dropdown-content");
+                for (let i = 0; i < dropdowns.length; i++) {
+                    const openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+<footer class="Footer">
+    <p>© Danielle Newmarch. </p><p>All rights reserved.</p>
+    <nav>
+    <a href="../SubWebpages/AboutEnviroClub.html">About EnviroClub </a> | 
+    <a href="../SubWebpages/Contact.html">Contact</a> | 
+    <a href="../SubWebpages/PrivacyPolicy.html">Privacy Policy</a>
+    </nav>
+    </footer>
+</html>

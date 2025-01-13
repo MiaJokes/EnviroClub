@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earth Day - EnviroClub</title>
+    <link rel="stylesheet" href="../EnviroClubStyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!--Fixed Header-->
+<div class="fixed-header">
+    <h1>The EnviroClub Website</h1>
+    <nav>
+    <a href="../EnviroClubWebpage.html">Home</a>
+    <a href="../SubWebpages/AboutEnviroClub.html">About Us</a>
+    <!--Dropdown list of dates in Header-->
+    <div class="dropdown">
+    <span class="dropbtn" onclick="toggleDropdown()">Dates</span>
+    <div class="dropdown-content">
+        <a href="./WorldWetlandDay.html">World Wetland Day</a>
+        <a href="./WorldWildlifeDay.html">World Wildlife Day</a>
+        <a href="./WorldWaterDay.html">World Water Day</a>
+        <a href="./EarthDay.html">Earth Day</a>
+        <a href="./WorldMigratoryBridDay.html">World Migratory Bird Day</a>
+        <a href="./WorldEnvironmentDay.html">World Environment Day</a>
+        <a href="./WorldOceansDay.html">World Oceans Day</a>
+        <a href="./WorldCleanupDay.html">World Cleanup Day</a>
+        <a href="./InternationalDayOfClimateAction.html">International Day of Climate Action</a>
+        <a href="./WorldSoilDay.html">World Soil Day</a>
+    </div>
+    </div>
+    <a href="../index.html">Analyse Photo</a>
+    <a href="../SubWebpages/Contact.html">Contact</a>
+    </nav>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <header>
+        <h1>Welcome To World Earth Day!</h1>
+    </header>
+
+    <main>
+        <p><strong>Celebrate the planet we call home and take action to protect its future on April 22nd, especially during 8:30 pm - 9:30 pm which is Earth Hour!</strong></p>
+        <h2>How To Care For Our Earth</h2>
+        <p>Our planet, <strong>a delicate balance of ecosystems and resources,</strong> needs our care. By making <strong>conscious choices,</strong> we can contribute to a sustainable future.
+
+        <strong>Reducing waste</strong> is a crucial step. <strong>Recycling, composting, and minimizing single-use plastics</strong> can significantly reduce our environmental impact. <strong>Conserving energy and water</strong> is equally important. <strong>Simple actions</strong> like turning off lights and water when not in use can make a big difference.
+        <br><br>Choosing <strong>sustainable transportation</strong> options, such as walking, biking, or using public transport, can reduce carbon emissions.
+           <strong>Supporting green initiatives,</strong> such as <strong>planting trees and protecting natural habitats,</strong> helps combat climate change and biodiversity loss. <br><br>Choosing <strong>sustainable products and supporting eco-friendly businesses</strong> can further contribute to a healthier planet.
+            
+            Let's embrace a sustainable lifestyle and <strong>inspire others</strong> to do the same.<strong> Together, we can protect our planet for generations to come.</strong></p>
+        <div class="video-container">
+            <iframe 
+            src="https://www.youtube.com/embed/ZSnOXbaXzfM?si=offOg3XYKWNgqLci" 
+            title="YouTube Love Song to the Earth Video" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" 
+            allowfullscreen></iframe>
+        </div>
+    </main>
+    <script>
+        function toggleDropdown() {
+            const dropdown = document.getElementById("dropdownContent");
+            dropdown.classList.toggle("show");
+        }
+    
+        // Close the dropdown if clicking outside of it
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+                const dropdowns = document.getElementsByClassName("dropdown-content");
+                for (let i = 0; i < dropdowns.length; i++) {
+                    const openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+<footer class="Footer">
+    <p>© Danielle Newmarch. </p><p>All rights reserved.</p>
+    <nav>
+    <a href="../SubWebpages/AboutEnviroClub.html">About EnviroClub </a> | 
+    <a href="../SubWebpages/Contact.html">Contact</a> | 
+    <a href="../SubWebpages/PrivacyPolicy.html">Privacy Policy</a>
+    </nav>
+    </footer>
+</html>
