@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EnviroClub</title>
+<!--Link CSS to the HTML-->
+<link rel="stylesheet" href="./EnviroClubStyle.css">
+<!--Import fonts-->
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+<!--Fixed Header-->
+<div class="fixed-header">
+<h1>The EnviroClub Website</h1>
+<nav>
+<a href="./EnviroClubWebpage.html">Home</a>
+<a href="./SubWebpages/AboutEnviroClub.html">About Us</a>
+<!--Dropdown list of dates in Header-->
+<div class="dropdown">
+<span class="dropbtn" onclick="toggleDropdown()">Dates</span>
+<div class="dropdown-content">
+<a href="./DateWebpages/WorldWetlandDay.html">World Wetland Day</a>
+<a href="./DateWebpages/WorldWildlifeDay.html">World Wildlife Day</a>
+<a href="./DateWebpages/WorldWaterDay.html">World Water Day</a>
+<a href="./DateWebpages/EarthDay.html">Earth Day</a>
+<a href="./DateWebpages/WorldMigratoryBridDay.html">World Migratory Bird Day</a>
+<a href="./DateWebpages/WorldEnvironmentDay.html">World Environment Day</a>
+<a href="./DateWebpages/WorldOceansDay.html">World Oceans Day</a>
+<a href="./DateWebpages/WorldCleanupDay.html">World Cleanup Day</a>
+<a href="./DateWebpages/InternationalDayOfClimateAction.html">International Day of Climate Action</a>
+<a href="./DateWebpages/WorldSoilDay.html">World Soil Day</a>
+</div>
+</div>
+<a href="./index.html">Analyse Photo</a>
+<a href="./SubWebpages/Contact.html">Contact</a>
+</nav>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<main>
+<div class="heading-border">
+<h1>ECO-ACTION STARTS WITH YOU!</h1>
+<h2>Small Choices Lead To Big Impacts</h2>
+</div>
+<br>
+<br>
+<br>
+
+<!--Images of nature in KZN-->
+<div class="photo-gallery-background">
+<h3><br>The Nature Around Us</h3>
+<h4>Read More About EnviroClub <a href="./SubWebpages/AboutEnviroClub.html"><em>Here</em></a></h4>
+
+<div class="slideshow-container">
+    <div class="slide fade">
+        <img src="./EnviroClubPhotos/Eagle.jpeg" alt="Image of an eagle">
+        <p>Photo By Sharon Clemens</p>
+    </div>
+    <div class="slide fade">
+        <img src="./EnviroClubPhotos/FishInPond.jpeg" alt="Image of fish in pond">
+        <p>Photo By Saskia Pillay</p>
+    </div>
+    <div class="slide fade">
+        <img src="./EnviroClubPhotos/SunThroughTrees.jpeg" alt="Image of sun through trees">
+        <p>Photo By Danielle Newmarch</p>
+    </div>
+    <div class="slide fade">
+        <img src="./EnviroClubPhotos/Flowers.jpeg" alt="Image of flowers">
+        <p>Photo By Saskia Pillay</p>
+    </div>
+    <div class="slide fade">
+        <img src="./EnviroClubPhotos/BlueFlowers.jpeg" alt="Image of blue flowers">
+        <p>Photo By Saskia Pillay</p>
+    </div>
+    <div class="slide fade">
+        <img src="./EnviroClubPhotos/Beach.jpeg" alt="Image of beach">
+        <p>Photo By Saskia Pillay</p>
+    </div>
+    <div class="slide fade">
+        <img src="./EnviroClubPhotos/lizard.jpeg" alt="Image of lizard">
+        <p>Photo By Danielle Newmarch</p>
+    </div>
+    <div class="slide fade">
+        <img src="./EnviroClubPhotos/BirdOnBranch.jpeg" alt="Image of bird on a branch">
+        <p>Photo By Danielle Newmarch</p>
+    </div>
+    <div class="slide fade">
+        <img src="./EnviroClubPhotos/RedFlower.jpeg" alt="Image of a red flower">
+        <p>Photo By Saskia Pillay</p>
+    </div>
+    <div class="slide fade">
+        <img src="./EnviroClubPhotos/Ocean.JPG" alt="Image of the ocean">
+        <p>Photo By Thandolwethu Myeza</p>
+    </div>
+    <div class="slide fade">
+        <img src="./EnviroClubPhotos/Sunrise.JPG" alt="Image of the sunrise">
+        <p>Photo By Thandolwethu Myeza</p>
+    </div>
+
+    <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+    <a class="next" onclick="changeSlide(1)">&#10095;</a>
+</div>
+
+<br> 
+
+<div class="dotsInAlign">
+    <span class="dot" onclick="currentSlide(1)"></span> 
+    <span class="dot" onclick="currentSlide(2)"></span> 
+    <span class="dot" onclick="currentSlide(3)"></span> 
+    <span class="dot" onclick="currentSlide(4)"></span> 
+    <span class="dot" onclick="currentSlide(5)"></span> 
+    <span class="dot" onclick="currentSlide(6)"></span> 
+    <span class="dot" onclick="currentSlide(7)"></span> 
+    <span class="dot" onclick="currentSlide(8)"></span> 
+    <span class="dot" onclick="currentSlide(9)"></span> 
+    <span class="dot" onclick="currentSlide(10)"></span> 
+    <span class="dot" onclick="currentSlide(11)"></span> 
+</div>
+
+<script src="./EnviroClubInteractivity.js"></script>
+
+<br>
+
+</div>
+
+<br>
+
+<!--Links to dates-->
+<div class="datesP">
+<p><br>Important Dates To Have On Your <strong>Environment Radar</strong></p>
+</div>
+<p><a href="./DateWebpages/WorldWetlandDay.html">1. World Wetland Day</a><br>- 02 February</p>
+<p><a href="./DateWebpages/WorldWildlifeDay.html">2. World Wildlife Day</a><br>- 03 March</p>
+<p><a href="./DateWebpages/WorldWaterDay.html">3. World Water Day</a><br>- 22 March</p>
+<p><a href="./DateWebpages/EarthDay.html">4. Earth Day (And Earth Hour!)</a><br>- 22 April</p>
+<p><a href="./DateWebpages/WorldMigratoryBridDay.html">5. World Migratory Bird Day</a><br>- 10 May</p>
+<p><a href="./DateWebpages/WorldEnvironmentDay.html">6. World Environment Day</a><br>- 05 June</p>
+<p><a href="./DateWebpages/WorldOceansDay.html">7. World Oceans Day</a><br>- 08 June</p>
+<p><a href="./DateWebpages/WorldCleanupDay.html">8. World Cleanup Day</a><br>- 20 September</p>
+<p><a href="./DateWebpages/InternationalDayOfClimateAction.html">9. International Day of Climate Action</a><br>- 24 October</p>
+<p><a href="./DateWebpages/WorldSoilDay.html">10. World Soil Day</a><br>- 05 December</p>
+
+<br>
+<br>
+
+<div class="info-background">
+    <br>
+    <h3>Why The Environment Matters</h3>
+    <div class="video-container">
+    <iframe 
+    src="https://www.youtube.com/embed/B-nEYsyRlYo?si=btlIdddZiUZbU8qA"
+    title="YouTube Save the Planet Video" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    referrerpolicy="strict-origin-when-cross-origin" 
+    allowfullscreen>
+    </iframe>
+</div>
+    <p>The environment is the <strong>foundation of all life on Earth</strong>, providing the <strong>air</strong> we breathe, the <strong>water</strong> we drink, and the <strong>food</strong> we eat. 
+        It supports <strong>diverse ecosystems</strong> that maintain the planet's delicate balance, ensuring <strong>clean air, fertile soil, and stable weather patterns.</strong> Beyond sustaining life, 
+        the environment offers spaces for recreation, inspiration, and cultural significance, enriching our <strong>mental and emotional well-being.</strong> <br><br>However, <strong>human activities</strong> 
+        like deforestation, pollution, and climate change are threatening these vital systems. <strong>Protecting the environment is not just about preserving nature; it's about safeguarding our future,</strong> 
+        as a healthy environment is essential for economic stability, public health, and the survival of all species, including our own. <br><br>
+     <br>
+</div>
+
+<br>
+<br>
+
+<div class="list"><h2>What Can You Do</h2></div>
+<br>
+<ul>
+    <li><strong>Reduce, Reuse, Recycle: </strong>Minimize waste by reusing items and recycling materials like paper, plastic, and glass.</li>
+</ul><br><ul>
+    <li><strong>Conserve Water: </strong>Use water-saving devices, fix leaks, and be mindful of water usage in everyday tasks like showering or washing dishes.</li>
+</ul><br><ul>
+    <li><strong>Use Renewable Energy: </strong>Switch to solar or wind energy to reduce reliance on fossil fuels and lower carbon emissions.</li>
+</ul><br><ul>
+    <li><strong>Plant Trees: </strong>Trees absorb carbon dioxide, provide oxygen, and help combat deforestation and habitat loss.</li>
+</ul><br><ul>
+    <li><strong>Support Sustainable Products: </strong>Choose eco-friendly products, like those made from recycled materials or organic farming practices and buy locally made products.</li>
+</ul><br><ul>
+    <li><strong>Raise Awareness: </strong> Educate yourself and others about environmental issues, share sustainable practices, and advocate for policies that protect natural resources and promote eco-friendly living.</li>
+</ul><br>
+
+</main>
+<script>
+    function toggleDropdown() {
+        const dropdown = document.getElementById("dropdownContent");
+        dropdown.classList.toggle("show");
+    }
+
+    // Close the dropdown if clicking outside of it
+    window.onclick = function(event) {
+        if (!event.target.matches('.dropbtn')) {
+            const dropdowns = document.getElementsByClassName("dropdown-content");
+            for (let i = 0; i < dropdowns.length; i++) {
+                const openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                }
+            }
+        }
+    }
+</script>
+</body>
+
+<!--Footer-->
+<footer class="Footer">
+<p>© Danielle Newmarch. </p><p>All rights reserved.</p>
+<nav>
+<a href="./SubWebpages/AboutEnviroClub.html">About EnviroClub </a> | 
+<a href="./SubWebpages/Contact.html">Contact</a> | 
+<a href="./SubWebpages/PrivacyPolicy.html">Privacy Policy</a>
+</nav>
+</footer>
+
+</html>
