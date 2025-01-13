@@ -18,13 +18,13 @@
             font-size: 2.5rem;
             text-align: center;
         }
-    
+
         #responseMessage.success {
             background: linear-gradient(135deg, rgb(51, 166, 204), #23ef7e); 
             color: #ffffff;
             border: 1px solid #c3e6cb;
         }
-    
+
         #responseMessage.error {
             background: linear-gradient(135deg, rgb(51, 166, 204), #23ef7e); 
             color: #c30013;
@@ -69,7 +69,8 @@
         <p>Whether you have questions, feedback, or suggestions, we would love to hear from you! Reach out to us using the email address or message box below, and we will get back to you as soon as possible. <br><br><strong>EnviroClub21@gmail.com</strong></p>
 
         <div class="contact-form-container">
-            <form class="contact-form" id="contactForm">
+            <!-- Updated form to work with Formspree -->
+            <form class="contact-form" id="contactForm" action="https://formspree.io/f/meoonvlo" method="POST">
                 <p><strong>Send Us A Message</strong></p>
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
@@ -102,19 +103,15 @@
         var formData = $(this).serialize(); // Serialize form data
 
         $.ajax({
-            url: "../contactBackEnd.php", // PHP script that processes the form
+            url: $(this).attr('action'), // Formspree endpoint
             type: "POST",
             data: formData,
             success: function(response){
                 console.log(response); // Log the response for debugging
-                $("#responseMessage").removeClass('success error').html(response);
+                $("#responseMessage").removeClass('success error').html("Message sent successfully!");
 
                 // Add the appropriate class based on the response
-                if (response.indexOf('Message sent successfully') !== -1) {
-                    $("#responseMessage").addClass('success');
-                } else {
-                    $("#responseMessage").addClass('error');
-                }
+                $("#responseMessage").addClass('success');
 
                 // Show the response message after a short delay (optional)
                 $("#responseMessage").fadeIn();
