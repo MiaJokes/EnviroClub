@@ -91,38 +91,37 @@
     </main>
 
     <script>
-        document.getElementById('contactForm').onsubmit = function (e) {
-            e.preventDefault();
-
-            var form = this;
+        // Handle success and error messages
+        document.getElementById('contactForm').onsubmit = function (event) {
+            event.preventDefault();
+            
+            var form = event.target;
             var formData = new FormData(form);
+            var responseMessageElement = document.getElementById('responseMessage');
 
-            fetch('https://formspree.io/f/meoonvlo', {
+            // Show loading message
+            responseMessageElement.style.display = 'block';
+            responseMessageElement.innerHTML = "Sending...";
+            responseMessageElement.classList.remove('success', 'error');
+            
+            // Handle successful form submission
+            fetch(form.action, {
                 method: 'POST',
-                body: formData,
+                body: formData
             })
-            .then(function (response) {
-                if (response.ok) {
-                    document.getElementById('responseMessage').innerHTML = "Your message has been sent successfully!";
-                    document.getElementById('responseMessage').style.display = "block";
-                    document.getElementById('responseMessage').style.backgroundColor = "#d4edda";
-                    document.getElementById('responseMessage').classList.remove('error');
-                    document.getElementById('responseMessage').classList.add('success');
-                    form.reset();
+            .then(response => response.json())
+            .then(data => {
+                if (data.ok) {
+                    responseMessageElement.innerHTML = "Your message has been sent successfully!";
+                    responseMessageElement.classList.add('success');
                 } else {
-                    document.getElementById('responseMessage').innerHTML = "There was an error submitting the form. Please try again later.";
-                    document.getElementById('responseMessage').style.display = "block";
-                    document.getElementById('responseMessage').style.backgroundColor = "#f8d7da";
-                    document.getElementById('responseMessage').classList.remove('success');
-                    document.getElementById('responseMessage').classList.add('error');
+                    responseMessageElement.innerHTML = "Sorry, there was an error sending your message.";
+                    responseMessageElement.classList.add('error');
                 }
             })
-            .catch(function (error) {
-                document.getElementById('responseMessage').innerHTML = "Error: " + error.message;
-                document.getElementById('responseMessage').style.display = "block";
-                document.getElementById('responseMessage').style.backgroundColor = "#f8d7da";
-                document.getElementById('responseMessage').classList.remove('success');
-                document.getElementById('responseMessage').classList.add('error');
+            .catch(error => {
+                responseMessageElement.innerHTML = "Error: " + error.message;
+                responseMessageElement.classList.add('error');
             });
         };
     </script>
