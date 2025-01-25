@@ -107,20 +107,24 @@
             data: formData,
             success: function(response){
                 console.log(response); // Log the response for debugging
-                $("#responseMessage").removeClass('success error').html("Message sent successfully!");
 
-                // Add the appropriate class based on the response
-                $("#responseMessage").addClass('success');
+                // Display success message
+                $("#responseMessage").removeClass('error').addClass('success')
+                    .html("Message sent successfully!"); // Success message text
 
-                // Show the response message after a short delay (optional)
+                // Show the success message
                 $("#responseMessage").fadeIn();
 
                 // Clear the form fields after a successful submission
                 $("#contactForm")[0].reset(); // This will reset the form fields
             },
             error: function(){
-                $("#responseMessage").html("<p>There was an error submitting the form. Please try again later.</p>");
-                $("#responseMessage").addClass('error').fadeIn();
+                // Display error message
+                $("#responseMessage").removeClass('success').addClass('error')
+                    .html("<p>There was an error submitting the form. Please try again later.</p>");
+
+                // Show the error message
+                $("#responseMessage").fadeIn();
             }
         });
     });
