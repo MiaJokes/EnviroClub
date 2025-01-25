@@ -69,19 +69,19 @@
         <p>Whether you have questions, feedback, or suggestions, we would love to hear from you! Reach out to us using the email address or message box below, and we will get back to you as soon as possible. <br><br><strong>EnviroClub21@gmail.com</strong></p>
 
         <div class="contact-form-container">
-          <form class="contact-form" id="contactForm" action="https://formspree.io/f/meoonvlo" method="POST">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
+            <form class="contact-form" id="contactForm" action="https://formspree.io/f/meoonvlo?embed=true" method="POST">
+                <p><strong>Send Us A Message</strong></p>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
 
-            <label for="email">Your Email:</label>
-            <input type="email" id="email" name="email" required>
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required>
 
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
 
-            <button type="submit">Send</button>
-        </form>
-
+                <button type="submit">Send</button>
+            </form>
         </div>
 
         <div id="responseMessage"></div> <!-- This will display the success or error message -->
@@ -92,61 +92,55 @@
     </main>
 
     <script>
-     $(document).ready(function(){
-    $("#contactForm").submit(function(event){
-        event.preventDefault(); // Prevent default form submission
+        $(document).ready(function(){
+            // Form submission event listener
+            $("#contactForm").submit(function(event){
+                event.preventDefault(); // Prevent default form submission
 
-        // Hide the response message immediately after the form is submitted
-        $("#responseMessage").fadeOut();
+                // Hide the response message immediately after form submission
+                $("#responseMessage").fadeOut();
 
-        var formData = $(this).serialize(); // Serialize form data
+                var formData = $(this).serialize(); // Serialize form data
 
-        $.ajax({
-            url: $(this).attr('action'), // Formspree endpoint
-            type: "POST",
-            data: formData,
-            success: function(response){
-                console.log(response); // Log the response for debugging
-
-                // Display success message
-                $("#responseMessage").removeClass('error').addClass('success')
-                    .html("Message sent successfully!"); // Success message text
-
-                // Show the success message
-                $("#responseMessage").fadeIn();
-
-                // Clear the form fields after a successful submission
-                $("#contactForm")[0].reset(); // This will reset the form fields
-            },
-            error: function(){
-                // Display error message
-                $("#responseMessage").removeClass('success').addClass('error')
-                    .html("<p>There was an error submitting the form. Please try again later.</p>");
-
-                // Show the error message
-                $("#responseMessage").fadeIn();
-            }
+                $.ajax({
+                    url: $(this).attr('action'), // Formspree endpoint
+                    type: "POST",
+                    data: formData,
+                    success: function(response){
+                        // If successful, display success message
+                        $("#responseMessage").removeClass('error').addClass('success').html("Message sent successfully!");
+                        $("#responseMessage").fadeIn();
+                        
+                        // Clear form fields
+                        $("#contactForm")[0].reset();
+                    },
+                    error: function(){
+                        // If error occurs, display error message
+                        $("#responseMessage").removeClass('success').addClass('error').html("There was an error submitting the form. Please try again later.");
+                        $("#responseMessage").fadeIn();
+                    }
+                });
+            });
         });
-    });
-});
 
-    function toggleDropdown() {
-        const dropdown = document.getElementById("dropdownContent");
-        dropdown.classList.toggle("show");
-    }
+        // Dropdown functionality
+        function toggleDropdown() {
+            const dropdown = document.getElementById("dropdownContent");
+            dropdown.classList.toggle("show");
+        }
 
-    // Close the dropdown if clicking outside of it
-    window.onclick = function(event) {
-        if (!event.target.matches('.dropbtn')) {
-            const dropdowns = document.getElementsByClassName("dropdown-content");
-            for (let i = 0; i < dropdowns.length; i++) {
-                const openDropdown = dropdowns[i];
-                if (openDropdown.classList.contains('show')) {
-                    openDropdown.classList.remove('show');
+        // Close the dropdown if clicking outside of it
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+                const dropdowns = document.getElementsByClassName("dropdown-content");
+                for (let i = 0; i < dropdowns.length; i++) {
+                    const openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
                 }
             }
         }
-    }
     </script>
 </body>
 
@@ -160,4 +154,3 @@
 </footer>
 
 </html>
-
