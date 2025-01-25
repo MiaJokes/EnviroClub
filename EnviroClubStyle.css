@@ -189,12 +189,6 @@ body {
         line-height: 1rem; 
         padding: 10px; 
     }
-
-    .fixed-header h1{
-        font-size: 0.5rem !important; 
-        line-height: 0.8rem !important; 
-        padding: 10px; 
-    }
     
     .fixed-header nav a {
         font-size: 16px;
